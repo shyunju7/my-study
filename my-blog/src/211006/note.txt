@@ -1,0 +1,13 @@
+
+
+### useState
+- 초기 init state르 설정할 수 있는 hooks (Hooks는 함수형 프로그램 권장한다.)
+- class형 컴포넌트를 사용한 것보다 더 간결하게 구현 가능하다.
+
+### useInput
+- useState 기반으로 만든 custom hooks
+- value의 길이를 검증하거나 포함하고 있는 값에 따른 조건부 처리가 가능하다.
+
+### useTabs
+- useState 기반으로 만든 custom hooks
+- 탭이나 버튼에 따라 다른 내용을 보여줄 수 있다.
