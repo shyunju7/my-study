@@ -1,0 +1,11 @@
+
+### useEffect
+- 함수형 클래스에서 다양한 side effect를 가능하게 한다.
+- 클래스형 컴포너트에서 ComponentDidMount, ComponentWillUnMount, ComponentDidUpdate의 역할을 한다.
+- useEffect는 function과 dependency 두가지 인자를 받는다.
+- dependency(deps)가 값이 비었을 경우, 컴포넌트가 mount될 때 반응한다.
+- dependency(deps)에 값이 존재할 경우, 값이 변화할 때 반응한다.
+
+### useTitle
+
+### useClick
