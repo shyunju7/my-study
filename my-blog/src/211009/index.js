@@ -1,16 +1,19 @@
-import { React, useEffect } from "react";
+import { React, useEffect, useState } from "react";
 
 const HooksStudy = () => {
+  const [count, setCount] = useState(0);
   const sayHello = () => {
     console.log(`hello!`);
   };
 
-  useEffect(sayHello);
+  useEffect(() => {
+    sayHello();
+  }, [count]);
 
   return (
     <div>
       <h1>hooksStudy!</h1>
-      <button onClick={() => console.log(`clicked!`)}>button</button>
+      <button onClick={() => setCount(count + 1)}>button</button>
     </div>
   );
 };
