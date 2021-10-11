@@ -9,7 +9,7 @@
 ### 2021.10.09
 
 - [x] useEffect
-- [ ] useTitle
+- [x] useTitle
 - [ ] useClick
 - [ ] useConfirm
 - [ ] usePreventLeave
