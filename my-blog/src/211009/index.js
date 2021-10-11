@@ -1,4 +1,5 @@
 import { React, useEffect, useState } from "react";
+import { useTitle } from "./hooks/customHooks";
 
 const HooksStudy = () => {
   const [count, setCount] = useState(0);
@@ -10,10 +11,15 @@ const HooksStudy = () => {
     sayHello();
   }, [count]);
 
+  const titleUpdater = useTitle("Loading...");
+
   return (
     <div>
-      <h1>hooksStudy!</h1>
+      <h1>useEffect</h1>
       <button onClick={() => setCount(count + 1)}>button</button>
+
+      <h1>useTitle</h1>
+      <button onClick={() => titleUpdater("Main")}>updateTitle</button>
     </div>
   );
 };
