@@ -7,5 +7,6 @@
 - dependency(deps)에 값이 존재할 경우, 값이 변화할 때 반응한다.
 
 ### useTitle
+- doc의 title을 업데이트하여 준다. (react-helmet을 사용하여 할 수 있지만, Hooks를 사용해서도 할 수 있다.)
 
 ### useClick
