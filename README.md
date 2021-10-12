@@ -10,7 +10,7 @@
 
 - [x] useEffect
 - [x] useTitle
-- [ ] useClick
+- [x] useClick
 - [ ] useConfirm
 - [ ] usePreventLeave
 - [ ] usePageLeave
