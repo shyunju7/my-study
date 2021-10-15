@@ -1,5 +1,5 @@
 import { React, useEffect, useState } from "react";
-import { useClick, useTitle } from "./hooks/customHooks";
+import { useClick, useConfirm, useTitle } from "./hooks/customHooks";
 
 const HooksStudy = () => {
   const [count, setCount] = useState(0);
@@ -18,6 +18,9 @@ const HooksStudy = () => {
   };
   const ref = useClick(onClick);
 
+  const checkedDialog = () => console.log("Okay!");
+  const confirmContent = useConfirm("내용을 확인하셨나요?", checkedDialog);
+
   return (
     <div>
       <h1>useEffect</h1>
@@ -27,6 +30,9 @@ const HooksStudy = () => {
       <button onClick={() => titleUpdater("Main")}>updateTitle</button>
 
       <h1 ref={ref}>useClick</h1>
+
+      <h1>useConfirm</h1>
+      <button onClick={confirmContent}>확인하기</button>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
+/** useTitle **/
 export const useTitle = (initTitle) => {
   const [title, setTitle] = useState(initTitle);
 
@@ -12,6 +13,7 @@ export const useTitle = (initTitle) => {
   return setTitle;
 };
 
+/** useClick **/
 export const useClick = (onClick) => {
   const element = useRef();
 
@@ -31,4 +33,17 @@ export const useClick = (onClick) => {
   if (typeof onClick !== "function") return;
 
   return element;
+};
+
+/** useConfirm **/
+export const useConfirm = (message = "", callback) => {
+  if (typeof callback !== "function") return;
+
+  const confirmAction = () => {
+    if (window.confirm(message)) {
+      callback();
+    }
+  };
+
+  return confirmAction;
 };
