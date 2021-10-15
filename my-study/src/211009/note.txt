@@ -19,6 +19,7 @@
 ### usePreventLeave
 - 사용자가 데이터를 저장하지 않은 상태에서 페이지를 벗어날 때 사용할 수 있다.(ex. 아직 저장되지 않았다.)
 - 'beforeunload'를 사용하여 구현한다.(beforeunload는 위와 같은 상황에서 페이지를 닫을 것인지에 대한 안내창을 제공해준다.)
+- 'beforeunload'는 함수가 닫히기 전에 function을 실행할 수 있게 한다.
 
 ### react Hooks
 - hooks는 문서의 최상단에 어떤 값이 return되기 전에 정의되어야 한다.
