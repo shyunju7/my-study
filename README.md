@@ -11,8 +11,8 @@
 - [x] useEffect
 - [x] useTitle
 - [x] useClick
-- [ ] useConfirm
-- [ ] usePreventLeave
+- [x] useConfirm
+- [x] usePreventLeave
 - [ ] usePageLeave
 - [ ] useFadeIn
 - [ ] useNetwork
