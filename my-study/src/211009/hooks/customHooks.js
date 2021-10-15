@@ -47,3 +47,18 @@ export const useConfirm = (message = "", callback) => {
 
   return confirmAction;
 };
+
+/** usePreventLeave **/
+
+export const usePreventLeave = () => {
+  const listener = (e) => {
+    e.preventDefault();
+    e.returnValue = ""; // beforeunload는 return이 팔요하다.
+  };
+
+  const enablePrevent = () => window.addEventListener("beforeunload", listener);
+  const disablePrevent = () =>
+    window.removeEventListener("beforeunload", listener);
+
+  return { enablePrevent, disablePrevent };
+};

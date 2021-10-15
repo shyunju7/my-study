@@ -1,5 +1,10 @@
 import { React, useEffect, useState } from "react";
-import { useClick, useConfirm, useTitle } from "./hooks/customHooks";
+import {
+  useClick,
+  useConfirm,
+  usePreventLeave,
+  useTitle,
+} from "./hooks/customHooks";
 
 const HooksStudy = () => {
   const [count, setCount] = useState(0);
@@ -20,6 +25,7 @@ const HooksStudy = () => {
 
   const checkedDialog = () => console.log("Okay!");
   const confirmContent = useConfirm("내용을 확인하셨나요?", checkedDialog);
+  const { enablePrevent, disablePrevent } = usePreventLeave();
 
   return (
     <div>
@@ -33,6 +39,10 @@ const HooksStudy = () => {
 
       <h1>useConfirm</h1>
       <button onClick={confirmContent}>확인하기</button>
+
+      <h1>usePreventLeave</h1>
+      <button onClick={enablePrevent}>beforeunload 등록</button>
+      <button onClick={disablePrevent}>beforeunload 취소</button>
     </div>
   );
 };
