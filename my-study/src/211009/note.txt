@@ -12,5 +12,9 @@
 ### useClick
 - reference 개념을 이용한다. (reference는 react에 컴포넌트들의 특정부분을 선택할 수 있는 방법 == document.getElementById())
 
-### react Hooks를
+### useConfirm
+- 사용자가 어떤 액션을 하기 전에 확인할 때 사용한다. (ex. 정말 삭제할 것인지?)
+- 확인하면 function을 진행할 수 있도록 한다.
+
+### react Hooks
 - hooks는 문서의 최상단에 어떤 값이 return되기 전에 정의되어야 한다.
