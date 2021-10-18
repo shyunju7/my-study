@@ -79,5 +79,5 @@ export const useBeforeLeave = (onBefore) => {
     }
   };
 
-  if (typeof onBefore === "function") return;
+  if (typeof onBefore !== "function") return;
 };
