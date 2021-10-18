@@ -64,15 +64,20 @@ export const usePreventLeave = () => {
 };
 
 /** useBeforeLeave **/
-export const useBeforeLeave = () => {
-  const handleLeave = () => {
-    console.log("leaving!");
-  };
-
+export const useBeforeLeave = (onBefore) => {
   useEffect(() => {
     document.addEventListener("mouseleave", handleLeave);
     return () => {
       document.removeEventListener("mouseleave", handleLeave);
     };
   }, []);
+
+  const handleLeave = (e) => {
+    const { clientY } = e;
+    if (clientY <= 0) {
+      onBefore();
+    }
+  };
+
+  if (typeof onBefore === "function") return;
 };

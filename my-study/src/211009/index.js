@@ -28,7 +28,10 @@ const HooksStudy = () => {
   const confirmContent = useConfirm("내용을 확인하셨나요?", checkedDialog);
   const { enablePrevent, disablePrevent } = usePreventLeave();
 
-  useBeforeLeave();
+  const isLeavedPage = () => {
+    console.log("Leaving page...");
+  };
+  useBeforeLeave(isLeavedPage);
   return (
     <div>
       <h1>useEffect</h1>
