@@ -5,6 +5,7 @@ import {
   useConfirm,
   useFadeIn,
   usePreventLeave,
+  useScroll,
   useTitle,
 } from "./hooks/customHooks";
 
@@ -36,8 +37,11 @@ const HooksStudy = () => {
 
   // 1초 후에 2초동안 실행된다.
   const fadeInH1 = useFadeIn(1, 2);
+
+  const y = useScroll();
+
   return (
-    <div>
+    <div style={{ height: "1000vh" }}>
       <h1>useEffect</h1>
       <button onClick={() => setCount(count + 1)}>button</button>
 
@@ -56,6 +60,8 @@ const HooksStudy = () => {
       <h1>useBeforeLeave</h1>
 
       <h1 {...fadeInH1}>useFadeIn</h1>
+
+      <h1 style={{ color: y < 100 ? "red" : "green" }}>useScroll</h1>
     </div>
   );
 };

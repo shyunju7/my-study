@@ -49,7 +49,6 @@ export const useConfirm = (message = "", callback) => {
 };
 
 /** usePreventLeave **/
-
 export const usePreventLeave = () => {
   const listener = (e) => {
     e.preventDefault();
@@ -95,4 +94,23 @@ export const useFadeIn = (duration, delay) => {
   }, []);
 
   return { ref: element, style: { opacity: 0 } };
+};
+
+/** useScroll **/
+export const useScroll = () => {
+  const [scrollY, setScrollY] = useState({
+    scrollY: 0,
+  });
+
+  const onScroll = () => {
+    console.log(`scrollY : ${window.scrollY}`);
+    setScrollY(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return scrollY;
 };
