@@ -1,5 +1,6 @@
 import { React, useEffect, useState } from "react";
 import {
+  useBeforeLeave,
   useClick,
   useConfirm,
   usePreventLeave,
@@ -27,6 +28,7 @@ const HooksStudy = () => {
   const confirmContent = useConfirm("내용을 확인하셨나요?", checkedDialog);
   const { enablePrevent, disablePrevent } = usePreventLeave();
 
+  useBeforeLeave();
   return (
     <div>
       <h1>useEffect</h1>
@@ -43,6 +45,8 @@ const HooksStudy = () => {
       <h1>usePreventLeave</h1>
       <button onClick={enablePrevent}>beforeunload 등록</button>
       <button onClick={disablePrevent}>beforeunload 취소</button>
+
+      <h1>useBeforeLeave</h1>
     </div>
   );
 };

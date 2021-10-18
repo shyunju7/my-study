@@ -62,3 +62,17 @@ export const usePreventLeave = () => {
 
   return { enablePrevent, disablePrevent };
 };
+
+/** useBeforeLeave **/
+export const useBeforeLeave = () => {
+  const handleLeave = () => {
+    console.log("leaving!");
+  };
+
+  useEffect(() => {
+    document.addEventListener("mouseleave", handleLeave);
+    return () => {
+      document.removeEventListener("mouseleave", handleLeave);
+    };
+  }, []);
+};
