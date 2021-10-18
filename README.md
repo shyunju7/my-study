@@ -14,7 +14,7 @@
 - [x] useConfirm
 - [x] usePreventLeave
 - [x] usePageLeave
-- [ ] useFadeIn
+- [x] useFadeIn
 - [ ] useNetwork
 - [ ] useScroll
 - [ ] useFullscreen
