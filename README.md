@@ -13,7 +13,7 @@
 - [x] useClick
 - [x] useConfirm
 - [x] usePreventLeave
-- [ ] usePageLeave
+- [x] usePageLeave
 - [ ] useFadeIn
 - [ ] useNetwork
 - [ ] useScroll
