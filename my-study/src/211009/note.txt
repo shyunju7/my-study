@@ -31,5 +31,8 @@
 - css를 사용해서 만들 수 있지만, animation과 hooks를 사용하여 만들 수 있다.
 
 
+### useScroll
+- 스크롤 이벤트 작동시, 스크롤 위치에 따른 효과 처리를 할 수 있다.
+
 ### react Hooks
 - hooks는 문서의 최상단에 어떤 값이 return되기 전에 정의되어야 한다.
