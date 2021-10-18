@@ -3,6 +3,7 @@ import {
   useBeforeLeave,
   useClick,
   useConfirm,
+  useFadeIn,
   usePreventLeave,
   useTitle,
 } from "./hooks/customHooks";
@@ -32,6 +33,9 @@ const HooksStudy = () => {
     console.log("Leaving page...");
   };
   useBeforeLeave(isLeavedPage);
+
+  // 1초 후에 2초동안 실행된다.
+  const fadeInH1 = useFadeIn(1, 2);
   return (
     <div>
       <h1>useEffect</h1>
@@ -50,6 +54,8 @@ const HooksStudy = () => {
       <button onClick={disablePrevent}>beforeunload 취소</button>
 
       <h1>useBeforeLeave</h1>
+
+      <h1 {...fadeInH1}>useFadeIn</h1>
     </div>
   );
 };
