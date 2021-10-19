@@ -17,6 +17,6 @@
 - [x] useFadeIn
 - [ ] useNetwork
 - [x] useScroll
-- [ ] useFullscreen
+- [x] useFullscreen
 - [ ] useNotification
 - [ ] useAxios
