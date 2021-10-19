@@ -114,3 +114,17 @@ export const useScroll = () => {
 
   return scrollY;
 };
+
+/** useFullScreen **/
+export const useFullScreen = (isFull) => {
+  const element = useRef();
+
+  const triggerScreen = (isFull) => {
+    if (element.current && isFull === false) {
+      element.current.requestFullscreen();
+    } else if (element.current && isFull === true) {
+      document.exitFullscreen();
+    }
+  };
+  return { element, triggerScreen };
+};

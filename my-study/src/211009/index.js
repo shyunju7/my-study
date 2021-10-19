@@ -4,6 +4,7 @@ import {
   useClick,
   useConfirm,
   useFadeIn,
+  useFullScreen,
   usePreventLeave,
   useScroll,
   useTitle,
@@ -40,6 +41,10 @@ const HooksStudy = () => {
 
   const y = useScroll();
 
+  const { element, triggerScreen } = useFullScreen();
+
+  const [isFull, setIsFull] = useState(false);
+
   return (
     <div style={{ height: "1000vh" }}>
       <h1>useEffect</h1>
@@ -62,6 +67,24 @@ const HooksStudy = () => {
       <h1 {...fadeInH1}>useFadeIn</h1>
 
       <h1 style={{ color: y < 100 ? "red" : "green" }}>useScroll</h1>
+
+      <h1>useFullScreen</h1>
+
+      <div ref={element}>
+        <img
+          alt="my-image"
+          src="https://media.vlpt.us/images/shyunju7/profile/81789180-a833-424a-bfd1-e1261f954d58/KakaoTalk_20210428_093911796.jpg?w=240"
+        />
+
+        <button
+          onClick={() => {
+            triggerScreen(isFull);
+            setIsFull(!isFull);
+          }}
+        >
+          {isFull ? "Exit FullScreen" : "Set FullScreen"}
+        </button>
+      </div>
     </div>
   );
 };
