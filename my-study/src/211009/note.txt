@@ -37,5 +37,9 @@
 ### useFullScreen
 - 특정 element를 fullScreen 해줄 수 있다.
 
+### useNotification
+- 웹 서비스 내에 알림을 설정할 수 있다.
+- 다양한 options을 전달할 수 있다.
+
 ### react Hooks
 - hooks는 문서의 최상단에 어떤 값이 return되기 전에 정의되어야 한다.

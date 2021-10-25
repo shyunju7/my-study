@@ -5,6 +5,7 @@ import {
   useConfirm,
   useFadeIn,
   useFullScreen,
+  useNotification,
   usePreventLeave,
   useScroll,
   useTitle,
@@ -45,6 +46,10 @@ const HooksStudy = () => {
 
   const [isFull, setIsFull] = useState(false);
 
+  const triggerNotification = useNotification("알림", {
+    body: "알림 테스트중입니다.",
+  });
+
   return (
     <div style={{ height: "1000vh" }}>
       <h1>useEffect</h1>
@@ -84,6 +89,9 @@ const HooksStudy = () => {
         >
           {isFull ? "Exit FullScreen" : "Set FullScreen"}
         </button>
+
+        <h1>useNotification</h1>
+        <button onClick={triggerNotification}>Notification</button>
       </div>
     </div>
   );
